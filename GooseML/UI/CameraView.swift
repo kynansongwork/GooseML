@@ -27,10 +27,12 @@ class CameraView: UIView {
     
     func setUp() {
         self.addSubview(cameraView)
+        self.backgroundColor = .white
         cameraView.centerInSuperview()
-        cameraView.height(200)
-        cameraView.width(100)
+        cameraView.height(500)
+        cameraView.width(400)
         cameraView.backgroundColor = .black
+        
     }
     
 }

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24734D54283381C2001CAC59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24734D53283381C2001CAC59 /* AppDelegate.swift */; };
-		24734D56283381C2001CAC59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24734D55283381C2001CAC59 /* SceneDelegate.swift */; };
 		24734D5B283381C2001CAC59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24734D59283381C2001CAC59 /* Main.storyboard */; };
 		24734D5D283381C3001CAC59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24734D5C283381C3001CAC59 /* Assets.xcassets */; };
 		24734D60283381C3001CAC59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24734D5E283381C3001CAC59 /* LaunchScreen.storyboard */; };
@@ -17,12 +15,12 @@
 		248082562833854200CE7483 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248082552833854200CE7483 /* CameraView.swift */; };
 		248082582833854800CE7483 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248082572833854800CE7483 /* CameraViewController.swift */; };
 		2480825A2833854A00CE7483 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248082592833854A00CE7483 /* CameraViewModel.swift */; };
+		2480825D2833863C00CE7483 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480825C2833863C00CE7483 /* AppDelegate.swift */; };
+		2480825F2833898300CE7483 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480825E2833898300CE7483 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		24734D50283381C2001CAC59 /* GooseML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooseML.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		24734D53283381C2001CAC59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24734D55283381C2001CAC59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		24734D5A283381C2001CAC59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24734D5C283381C3001CAC59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24734D5F283381C3001CAC59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +29,8 @@
 		248082552833854200CE7483 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		248082572833854800CE7483 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		248082592833854A00CE7483 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		2480825C2833863C00CE7483 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = GooseML/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		2480825E2833898300CE7483 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +64,11 @@
 		24734D52283381C2001CAC59 /* GooseML */ = {
 			isa = PBXGroup;
 			children = (
+				2480825C2833863C00CE7483 /* AppDelegate.swift */,
+				2480825E2833898300CE7483 /* SceneDelegate.swift */,
 				2480825B2833857A00CE7483 /* Utilites */,
 				248082542833853800CE7483 /* UI */,
 				248082512833851100CE7483 /* CoreMLModels */,
-				24734D53283381C2001CAC59 /* AppDelegate.swift */,
-				24734D55283381C2001CAC59 /* SceneDelegate.swift */,
 				24734D59283381C2001CAC59 /* Main.storyboard */,
 				24734D5C283381C3001CAC59 /* Assets.xcassets */,
 				24734D5E283381C3001CAC59 /* LaunchScreen.storyboard */,
@@ -179,12 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2480825D2833863C00CE7483 /* AppDelegate.swift in Sources */,
 				248082532833852300CE7483 /* BirdModel.mlmodel in Sources */,
 				248082582833854800CE7483 /* CameraViewController.swift in Sources */,
-				24734D54283381C2001CAC59 /* AppDelegate.swift in Sources */,
-				24734D56283381C2001CAC59 /* SceneDelegate.swift in Sources */,
 				248082562833854200CE7483 /* CameraView.swift in Sources */,
 				2480825A2833854A00CE7483 /* CameraViewModel.swift in Sources */,
+				2480825F2833898300CE7483 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +338,6 @@
 				INFOPLIST_FILE = GooseML/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -366,7 +365,6 @@
 				INFOPLIST_FILE = GooseML/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
