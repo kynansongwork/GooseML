@@ -1,6 +1,6 @@
 //
 //  CameraViewModel.swift
-//  GooseNotGoose
+//  GooseML
 //
 //  Created by Kynan Song on 17/05/2022.
 //

@@ -12,9 +12,11 @@
 		24734D5B283381C2001CAC59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24734D59283381C2001CAC59 /* Main.storyboard */; };
 		24734D5D283381C3001CAC59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24734D5C283381C3001CAC59 /* Assets.xcassets */; };
 		24734D60283381C3001CAC59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24734D5E283381C3001CAC59 /* LaunchScreen.storyboard */; };
-		24734D68283381CB001CAC59 /* UI in Resources */ = {isa = PBXBuildFile; fileRef = 24734D67283381CB001CAC59 /* UI */; };
-		24734D6A283381DA001CAC59 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 24734D69283381DA001CAC59 /* Models */; };
 		24734D6D2833820E001CAC59 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 24734D6C2833820E001CAC59 /* TinyConstraints */; };
+		248082532833852300CE7483 /* BirdModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 248082522833852300CE7483 /* BirdModel.mlmodel */; };
+		248082562833854200CE7483 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248082552833854200CE7483 /* CameraView.swift */; };
+		248082582833854800CE7483 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248082572833854800CE7483 /* CameraViewController.swift */; };
+		2480825A2833854A00CE7483 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248082592833854A00CE7483 /* CameraViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +27,10 @@
 		24734D5C283381C3001CAC59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24734D5F283381C3001CAC59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24734D61283381C3001CAC59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24734D67283381CB001CAC59 /* UI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UI; sourceTree = "<group>"; };
-		24734D69283381DA001CAC59 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		248082522833852300CE7483 /* BirdModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BirdModel.mlmodel; sourceTree = "<group>"; };
+		248082552833854200CE7483 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		248082572833854800CE7483 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		248082592833854A00CE7483 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +64,9 @@
 		24734D52283381C2001CAC59 /* GooseML */ = {
 			isa = PBXGroup;
 			children = (
-				24734D69283381DA001CAC59 /* Models */,
-				24734D67283381CB001CAC59 /* UI */,
+				2480825B2833857A00CE7483 /* Utilites */,
+				248082542833853800CE7483 /* UI */,
+				248082512833851100CE7483 /* CoreMLModels */,
 				24734D53283381C2001CAC59 /* AppDelegate.swift */,
 				24734D55283381C2001CAC59 /* SceneDelegate.swift */,
 				24734D59283381C2001CAC59 /* Main.storyboard */,
@@ -70,6 +75,31 @@
 				24734D61283381C3001CAC59 /* Info.plist */,
 			);
 			path = GooseML;
+			sourceTree = "<group>";
+		};
+		248082512833851100CE7483 /* CoreMLModels */ = {
+			isa = PBXGroup;
+			children = (
+				248082522833852300CE7483 /* BirdModel.mlmodel */,
+			);
+			path = CoreMLModels;
+			sourceTree = "<group>";
+		};
+		248082542833853800CE7483 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				248082552833854200CE7483 /* CameraView.swift */,
+				248082572833854800CE7483 /* CameraViewController.swift */,
+				248082592833854A00CE7483 /* CameraViewModel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2480825B2833857A00CE7483 /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +166,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24734D6A283381DA001CAC59 /* Models in Resources */,
-				24734D68283381CB001CAC59 /* UI in Resources */,
 				24734D60283381C3001CAC59 /* LaunchScreen.storyboard in Resources */,
 				24734D5D283381C3001CAC59 /* Assets.xcassets in Resources */,
 				24734D5B283381C2001CAC59 /* Main.storyboard in Resources */,
@@ -151,8 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				248082532833852300CE7483 /* BirdModel.mlmodel in Sources */,
+				248082582833854800CE7483 /* CameraViewController.swift in Sources */,
 				24734D54283381C2001CAC59 /* AppDelegate.swift in Sources */,
 				24734D56283381C2001CAC59 /* SceneDelegate.swift in Sources */,
+				248082562833854200CE7483 /* CameraView.swift in Sources */,
+				2480825A2833854A00CE7483 /* CameraViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
