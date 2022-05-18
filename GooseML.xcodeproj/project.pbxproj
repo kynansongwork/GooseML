@@ -17,6 +17,9 @@
 		2480825A2833854A00CE7483 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248082592833854A00CE7483 /* CameraViewModel.swift */; };
 		2480825D2833863C00CE7483 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480825C2833863C00CE7483 /* AppDelegate.swift */; };
 		2480825F2833898300CE7483 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480825E2833898300CE7483 /* SceneDelegate.swift */; };
+		2480826128338CC500CE7483 /* UIControlSubscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480826028338CC500CE7483 /* UIControlSubscriptions.swift */; };
+		2480826328338D9200CE7483 /* GooseClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480826228338D9200CE7483 /* GooseClassifier.swift */; };
+		248082662833E52600CE7483 /* CombineExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248082652833E52600CE7483 /* CombineExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		248082592833854A00CE7483 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		2480825C2833863C00CE7483 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = GooseML/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		2480825E2833898300CE7483 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2480826028338CC500CE7483 /* UIControlSubscriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlSubscriptions.swift; sourceTree = "<group>"; };
+		2480826228338D9200CE7483 /* GooseClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooseClassifier.swift; sourceTree = "<group>"; };
+		248082652833E52600CE7483 /* CombineExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		24734D52283381C2001CAC59 /* GooseML */ = {
 			isa = PBXGroup;
 			children = (
+				248082642833E50900CE7483 /* Extensions */,
 				2480825C2833863C00CE7483 /* AppDelegate.swift */,
 				2480825E2833898300CE7483 /* SceneDelegate.swift */,
 				2480825B2833857A00CE7483 /* Utilites */,
@@ -98,8 +105,18 @@
 		2480825B2833857A00CE7483 /* Utilites */ = {
 			isa = PBXGroup;
 			children = (
+				2480826028338CC500CE7483 /* UIControlSubscriptions.swift */,
+				2480826228338D9200CE7483 /* GooseClassifier.swift */,
 			);
 			path = Utilites;
+			sourceTree = "<group>";
+		};
+		248082642833E50900CE7483 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				248082652833E52600CE7483 /* CombineExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +198,11 @@
 			files = (
 				2480825D2833863C00CE7483 /* AppDelegate.swift in Sources */,
 				248082532833852300CE7483 /* BirdModel.mlmodel in Sources */,
+				2480826328338D9200CE7483 /* GooseClassifier.swift in Sources */,
 				248082582833854800CE7483 /* CameraViewController.swift in Sources */,
+				2480826128338CC500CE7483 /* UIControlSubscriptions.swift in Sources */,
 				248082562833854200CE7483 /* CameraView.swift in Sources */,
+				248082662833E52600CE7483 /* CombineExtensions.swift in Sources */,
 				2480825A2833854A00CE7483 /* CameraViewModel.swift in Sources */,
 				2480825F2833898300CE7483 /* SceneDelegate.swift in Sources */,
 			);
