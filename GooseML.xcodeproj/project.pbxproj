@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2436C9022845B0D100AAA654 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2436C9012845B0D100AAA654 /* Constants.swift */; };
 		24734D5B283381C2001CAC59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24734D59283381C2001CAC59 /* Main.storyboard */; };
 		24734D5D283381C3001CAC59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24734D5C283381C3001CAC59 /* Assets.xcassets */; };
 		24734D60283381C3001CAC59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24734D5E283381C3001CAC59 /* LaunchScreen.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2436C9012845B0D100AAA654 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		24734D50283381C2001CAC59 /* GooseML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooseML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24734D5A283381C2001CAC59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24734D5C283381C3001CAC59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +53,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2436C9002845B0C100AAA654 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		24734D47283381C2001CAC59 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +79,7 @@
 		24734D52283381C2001CAC59 /* GooseML */ = {
 			isa = PBXGroup;
 			children = (
+				2436C9002845B0C100AAA654 /* Models */,
 				248082642833E50900CE7483 /* Extensions */,
 				2480825C2833863C00CE7483 /* AppDelegate.swift */,
 				2480825E2833898300CE7483 /* SceneDelegate.swift */,
@@ -107,6 +117,7 @@
 			children = (
 				2480826028338CC500CE7483 /* UIControlSubscriptions.swift */,
 				2480826228338D9200CE7483 /* GooseClassifier.swift */,
+				2436C9012845B0D100AAA654 /* Constants.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -201,6 +212,7 @@
 				2480826328338D9200CE7483 /* GooseClassifier.swift in Sources */,
 				248082582833854800CE7483 /* CameraViewController.swift in Sources */,
 				2480826128338CC500CE7483 /* UIControlSubscriptions.swift in Sources */,
+				2436C9022845B0D100AAA654 /* Constants.swift in Sources */,
 				248082562833854200CE7483 /* CameraView.swift in Sources */,
 				248082662833E52600CE7483 /* CombineExtensions.swift in Sources */,
 				2480825A2833854A00CE7483 /* CameraViewModel.swift in Sources */,

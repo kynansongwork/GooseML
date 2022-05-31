@@ -15,6 +15,7 @@ import Combine
 class GooseClassifier {
     
     var passthrough = PassthroughSubject<String, Never>()
+    private let geese = ["anser", "branta"]
     
     let model: BirdModel = {
         do {
@@ -37,15 +38,19 @@ class GooseClassifier {
                     print("Classification results: \(classifications.first)")
                     
                     if let foundItem = classifications.first?.identifier.lowercased() {
-                        if foundItem.contains("anser") {
-                            self.passthrough.send(foundItem)
-                        } else {
-                            self.passthrough.send("Not a goose")
+                        
+                        for goose in self.geese {
+                            if foundItem.contains(goose) {
+                                self.passthrough.send(foundItem)
+                                break
+                            } else {
+                                self.passthrough.send("Not a goose")
+                            }
                         }
                     }
                 }
             }
-            // Uisng vision to crop the request.
+            // Using vision to crop the request.
             request.imageCropAndScaleOption = .centerCrop
             return request
         } catch {

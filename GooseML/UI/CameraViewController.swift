@@ -23,13 +23,14 @@ class CameraViewController: UIViewController {
     
     func bindViewModel() {
         viewModel.gooseClassifier.passthrough
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] value in
                 print("Is this a goose: \(value)")
                 
                 //TODO: Change this to copmbine way of doing async.
-                DispatchQueue.main.async {
+                //DispatchQueue.main.async {
                     self?.contentView.imageLabel.text = value
-                }
+                //}
                 
         }.store(in: &subscriptions)
     }
@@ -37,7 +38,6 @@ class CameraViewController: UIViewController {
     func bindView() {
         contentView.imagePickerButton.publisher(for: .touchUpInside)
                 .sink { [weak self] _ in
-                    print("Button Tapped")
                     self?.selectImage()
                 }.store(in: &subscriptions)
     }

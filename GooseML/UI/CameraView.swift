@@ -14,11 +14,15 @@ class CameraView: UIView {
     var imageLabel: UILabel = {
         let temp = UILabel()
         temp.text = "Unknown Image"
+        temp.font = UIFont(name: "HelveticaNeue-CondensedBold",
+                           size: 20)
         return temp
     }()
     
     var cameraView: UIImageView = {
         let temp = UIImageView()
+        temp.image = UIImage(named: "placeHolder")
+        temp.contentMode = .scaleAspectFit
         return temp
     }()
     
@@ -55,7 +59,7 @@ class CameraView: UIView {
         cameraView.backgroundColor = .black
         
         imageLabel.centerXToSuperview()
-        imageLabel.topToBottom(of: cameraView)
+        imageLabel.topToBottom(of: cameraView, offset: 20)
         
         imagePickerButton.height(30)
         imagePickerButton.width(30)
