@@ -12,6 +12,8 @@ class CameraViewModel {
     
     var gooseClassifier: GooseClassifier
     
+    @Published var imageName: String = "Unknown Image"
+    
     init() {
         self.gooseClassifier = GooseClassifier()
     }

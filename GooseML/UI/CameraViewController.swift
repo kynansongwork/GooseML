@@ -15,14 +15,23 @@ class CameraViewController: UIViewController {
     let contentView: CameraView = CameraView()
     let viewModel: CameraViewModel = CameraViewModel()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func loadView() {
         view = contentView
         bindView()
+        bindViewModel()
     }
     
     func bindViewModel() {
-        
+        viewModel.gooseClassifier.passthrough
+            .sink { [weak self] value in
+                print("Is this a goose: \(value)")
+                
+                //TODO: Change this to copmbine way of doing async.
+                DispatchQueue.main.async {
+                    self?.contentView.imageLabel.text = value
+                }
+                
+        }.store(in: &subscriptions)
     }
     
     func bindView() {

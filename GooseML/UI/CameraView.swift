@@ -11,6 +11,12 @@ import TinyConstraints
 
 class CameraView: UIView {
     
+    var imageLabel: UILabel = {
+        let temp = UILabel()
+        temp.text = "Unknown Image"
+        return temp
+    }()
+    
     var cameraView: UIImageView = {
         let temp = UIImageView()
         return temp
@@ -40,12 +46,16 @@ class CameraView: UIView {
     func setUp() {
         self.addSubview(cameraView)
         self.addSubview(imagePickerButton)
+        self.addSubview(imageLabel)
         self.backgroundColor = .white
         
         cameraView.centerInSuperview()
         cameraView.height(500)
         cameraView.width(400)
         cameraView.backgroundColor = .black
+        
+        imageLabel.centerXToSuperview()
+        imageLabel.topToBottom(of: cameraView)
         
         imagePickerButton.height(30)
         imagePickerButton.width(30)

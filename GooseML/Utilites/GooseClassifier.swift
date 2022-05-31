@@ -10,10 +10,11 @@ import CoreImage
 import CoreML
 import Vision
 import UIKit
+import Combine
 
 class GooseClassifier {
     
-    @Published var isGoose: Bool = false
+    var passthrough = PassthroughSubject<String, Never>()
     
     let model: BirdModel = {
         do {
@@ -37,15 +38,11 @@ class GooseClassifier {
                     
                     if let foundItem = classifications.first?.identifier.lowercased() {
                         if foundItem.contains("anser") {
-                            print("GOOOOOOSE")
-                            self.isGoose = true
-                            print(self.isGoose)
+                            self.passthrough.send(foundItem)
                         } else {
-                            print("Not Goose")
+                            self.passthrough.send("Not a goose")
                         }
                     }
-                } else {
-                    print("Not a goose")
                 }
             }
             // Uisng vision to crop the request.
